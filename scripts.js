@@ -14,37 +14,84 @@ function Games(title, game1, game2, game3, game4, game5, game6) {
 $(document).ready(function(){
   $("form#newGameList").submit(function(event) {
     event.preventDefault();
+// debugger;
+    var inputTitle = $("input#listTitleID").val();
+    var inputGame1 = $("input#gameOneID").val();
+    var inputGame2 = $("input#gameTwoID").val();
+    var inputGame3 = $("input#gameThreeID").val();
+    var inputGame4 = $("input#gameFourID").val();
+    var inputGame5 = $("input#gameFiveID").val();
+    var inputGame6 = $("input#gameSixID").val();
 
-    var inputTitle = $("input#titleList").val();
-    var inputGame1 = $("input#gameOne").val();
-    var inputGame2 = $("input#gameTwo").val();
-    var inputGame3 = $("input#gameThree").val();
-    var inputGame4 = $("input#gameFour").val();
-    var inputGame5 = $("input#gameFive").val();
-    var inputGame6 = $("input#gameSix").val();
+    var listOfGames = new Games(inputTitle, inputGame1, inputGame2, inputGame3, inputGame4, inputGame5, inputGame6);
 
-    var listOfGames = new Games(inputGame1, inputGame2, inputGame3, inputGame4, inputGame5, inputGame6);
-
-    $("ul#gameList").append("<li><span class='gameReveal'>"+listOfGames.listTitle+"</span></li>");
+    $("ul#gameList").append("<li><span class='gameReveal'>" + listOfGames.titleList + "</span></li>");
 
     $(".gameReveal").last().click(function() {
       $("#showGames").show();
-      $("#showGames h2").text(listOfGames.listTitle);
-      $(".gameOne").text(listOfGames.game1);
-      $(".gameTwo").text(listOfGames.game2);
-      $(".gameThree").text(listOfGames.game3);
-      $(".gameFour").text(listOfGames.game4);
-      $(".gameFive").text(listOfGames.game5);
-      $(".gameSix").text(listOfGames.game6);
-
+      $("#showGames h2").text(listOfGames.titleList);
+      $(".gameOne").text(listOfGames.gameList1);
+      $(".gameTwo").text(listOfGames.gameList2);
+      $(".gameThree").text(listOfGames.gameList3);
+      $(".gameFour").text(listOfGames.gameList4);
+      $(".gameFive").text(listOfGames.gameList5);
+      $(".gameSix").text(listOfGames.gameList6);
     });
 
-    $("input#titleList").val("");
-    $("input#gameOne").val("");
-    $("input#gameTwo").val("");
-    $("input#gameThree").val("");
-    $("input#gameFour").val("");
-    $("input#gameFive").val("");
-    $("input#gameSix").val("");
+    $(".gameOne").dblclick(function(){
+      $(".gameOne").addClass("strikethrough");
+    });
+
+    $(".gameOne").click(function(){
+      $(".gameOne").removeClass("strikethrough");
+    });
+
+    $(".gameTwo").dblclick(function(){
+      $(".gameTwo").addClass("strikethrough");
+    });
+
+    $(".gameTwo").click(function(){
+      $(".gameTwo").removeClass("strikethrough");
+    });
+
+    $(".gameThree").dblclick(function(){
+      $(".gameThree").addClass("strikethrough");
+    });
+
+    $(".gameThree").click(function(){
+      $(".gameThree").removeClass("strikethrough");
+    });
+
+    $(".gameFour").dblclick(function(){
+      $(".gameFour").addClass("strikethrough");
+    });
+
+    $(".gameFour").click(function(){
+      $(".gameFour").removeClass("strikethrough");
+    });
+
+    $(".gameFive").dblclick(function(){
+      $(".gameFive").addClass("strikethrough");
+    });
+
+    $(".gameFive").click(function(){
+      $(".gameFive").removeClass("strikethrough");
+    });
+
+    $(".gameSix").dblclick(function(){
+      $(".gameSix").addClass("strikethrough");
+    });
+
+    $(".gameSix").click(function(){
+      $(".gameSix").removeClass("strikethrough");
+    });
+
+    $("input#listTitleID").val("");
+    $("input#gameOneID").val("");
+    $("input#gameTwoID").val("");
+    $("input#gameThreeID").val("");
+    $("input#gameFourID").val("");
+    $("input#gameFiveID").val("");
+    $("input#gameSixID").val("");
   });
 });

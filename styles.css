@@ -1,0 +1,16 @@
+#showGames {
+  display: none;
+}
+
+.gameReveal {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.gameReveal:hover {
+  text-decoration: underline;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
