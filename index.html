@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="styles.css" rel="stylesheet" type="text/css"></link>
+    <script src="jquery.js"></script>
+    <script src="scripts.js"></script>
+    <title>Video Game Checklist</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Video Game Checklist</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Add the games:</h2>
+          <form id="newGameList">
+            <div class="form-group">
+              <label for="listTitle">List Name</label>
+              <input type="text" class="form-control" id="listTitle">
+            </div>
+            <label for="GamesList">Games</label>
+            <div class="form-group">
+
+              <input type="text" class="form-control" id="gameOne">
+            </div>
+            <div class="form-group">
+
+              <input type="text" class="form-control" id="gameTwo">
+            </div>
+            <div class="form-group">
+
+              <input type="text" class="form-control" id="gameThree">
+            </div>
+            <div class="form-group">
+
+              <input type="text" class="form-control" id="gameFour">
+            </div>
+            <div class="form-group">
+
+              <input type="text" class="form-control" id="gameFive">
+            </div>
+            <div class="form-group">
+
+              <input type="text" class="form-control" id="gameSix">
+            </div>
+            <button type="submit" name="btn">Submit</button>
+          </form>
+
+          <h2>Games:</h2>
+          <ul id="gameList">
+
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <div id="showGames">
+            <h2></h2>
+
+            <p><span class="gameOne"></span></p>
+            <p><span class="gameTwo"></span></p>
+            <p><span class="gameThree"></span></p>
+            <p><span class="gameFour"></span></p>
+            <p><span class="gameFive"></span></p>
+            <p><span class="gameSix"></span></p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </body>
+</html>
